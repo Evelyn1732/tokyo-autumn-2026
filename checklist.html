@@ -401,13 +401,53 @@ body{background:#fff!important;color:#54382b;font-family:'Zen Maru Gothic','Hira
 .journal-events .nature{background:#e7eedf}.journal-events .food{background:#f6e4df}.journal-events .city{background:#fff0d0}.journal-events .night{background:#eee5f5}.journal-events .travel{background:#f0efed}
 .notebook-note{font-size:12px;line-height:1.7;border-top:1px dashed #bba594;padding-top:12px;color:#765a49}
 @media(max-width:600px){.day-panel{padding:10px!important}.journal-events li{grid-template-columns:50px minmax(0,1fr);gap:6px;padding:9px}.journal-dayhead h2{font-size:18px}}
-</style></head>
+</style>
+<style id="bottom-tabbar-v2">
+/* FB/IG style: persistent bottom tabs, icon above small label */
+html{scroll-padding-bottom:95px}
+body{padding-bottom:calc(82px + env(safe-area-inset-bottom,0px))!important}
+header.bar{
+ position:fixed!important;top:auto!important;bottom:0!important;left:0!important;right:0!important;
+ z-index:9999!important;margin:0!important;padding:0 0 env(safe-area-inset-bottom,0px)!important;
+ background:rgba(250,246,239,.97)!important;
+ border-top:1px solid #ded0c4!important;border-bottom:0!important;
+ box-shadow:0 -5px 24px rgba(58,44,34,.09)!important;
+ -webkit-backdrop-filter:blur(16px)!important;backdrop-filter:blur(16px)!important;
+}
+header.bar .nav-shell{width:100%!important;max-width:680px!important;margin:auto!important;padding:0 7px!important}
+header.bar .main-tabs{
+ display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;
+ align-items:stretch!important;justify-items:stretch!important;gap:0!important;
+ width:100%!important;max-width:none!important;padding:0!important;margin:0!important;
+}
+header.bar .main-tabs a{
+ min-width:0!important;min-height:72px!important;display:flex!important;flex-direction:column!important;
+ align-items:center!important;justify-content:center!important;gap:3px!important;
+ padding:9px 2px 7px!important;border:0!important;border-radius:0!important;
+ text-decoration:none!important;background:transparent!important;box-shadow:none!important;
+ color:#81746b!important;font-size:10px!important;line-height:1.25!important;font-weight:500!important;
+}
+header.bar .main-tabs a .tab-icon{
+ display:block!important;font-size:25px!important;line-height:1!important;
+ height:29px!important;font-weight:400!important;color:inherit!important;
+}
+header.bar .main-tabs a.active,header.bar .main-tabs a[aria-current="page"]{
+ color:#934a55!important;font-weight:700!important;
+}
+header.bar .main-tabs a.active .tab-icon{color:#934a55!important}
+@media(prefers-color-scheme:dark){
+ header.bar{background:rgba(32,26,25,.96)!important;border-top-color:#53463e!important}
+ header.bar .main-tabs a{color:#c0b2a9!important}
+ header.bar .main-tabs a.active{color:#f1b8b7!important}
+}
+</style>
+</head>
 <body>
 <header class="bar"><div class="nav-shell"><nav aria-label="主要導覽" class="main-tabs">
 <a class="" href="index.html"><span class="tab-icon">⌂</span><span>首頁</span></a>
 <a class="" href="day1.html"><span class="tab-icon">▦</span><span>每日行程</span></a>
 <a class="" href="info.html"><span class="tab-icon">ⓘ</span><span>旅遊資訊</span></a>
-<a class="active" href="checklist.html"><span class="tab-icon">☑</span><span>行前清單</span></a>
+<a class="active" href="checklist.html"><span class="tab-icon"><svg aria-hidden="true" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:block"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5h6M9 12l2 2 4-4M9 17h6"/></svg></span><span>行前清單</span></a>
 </nav></div></header>
 <main id="top"><section class="app-page checklist-page" id="page-check"><div class="check-head"><div class="section-kicker">BEFORE THE JOURNEY</div><h2>行前準備清單</h2><p>每個項目都從未勾選開始。勾選後會自動儲存在這台裝置的瀏覽器中。</p><div class="check-progress"><span id="check-progress-label">0 / 0 已完成</span><div class="check-track"><div id="check-progress-bar"></div></div></div></div><div class="check-group"><h3>出發前辦理</h3><label class="check-item"><input data-check-id="item-1" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">旅平險</span></label><label class="check-item"><input data-check-id="item-2" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">eSIM</span></label><label class="check-item"><input data-check-id="item-3" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">VJW QR code</span></label></div><div class="check-group"><h3>證件／文件類</h3><label class="check-item"><input data-check-id="item-4" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">護照、身份證</span></label><label class="check-item"><input data-check-id="item-5" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">現金／信用卡</span></label><label class="check-item"><input data-check-id="item-6" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">機票確認單（列印）</span></label><label class="check-item"><input data-check-id="item-7" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">護照（列印）</span></label><label class="check-item"><input data-check-id="item-8" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">大頭照 × 2</span></label></div><div class="check-group"><h3>3C 用品</h3><label class="check-item"><input data-check-id="item-9" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">手機</span></label><label class="check-item"><input data-check-id="item-10" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">行動電源（隨身行李）</span></label><label class="check-item"><input data-check-id="item-11" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">手機充電線 × 2</span></label><label class="check-item"><input data-check-id="item-12" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">豆腐頭 × 2</span></label></div><div class="check-group"><h3>盥洗／衣物</h3><p class="group-note">液體用品分裝：每瓶不超過 100 ml，集中放入透明夾鏈袋</p><label class="check-item"><input data-check-id="item-13" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">基本梳洗用品（洗面乳、洗髮精、潤髮乳、沐浴乳）</span></label><label class="check-item"><input data-check-id="item-14" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">卸妝</span></label><label class="check-item"><input data-check-id="item-15" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">化妝水／髮油／髮膜</span></label><label class="check-item"><input data-check-id="item-16" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">面膜</span></label><label class="check-item"><input data-check-id="item-17" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">化妝包</span></label><label class="check-item"><input data-check-id="item-18" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">隱眼</span></label><label class="check-item"><input data-check-id="item-19" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">鏡子</span></label><label class="check-item"><input data-check-id="item-20" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">牙刷、牙膏、牙線</span></label><label class="check-item"><input data-check-id="item-21" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">換洗衣物</span></label><label class="check-item"><input data-check-id="item-22" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">內衣褲／襪子</span></label><label class="check-item"><input data-check-id="item-23" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">外套</span></label><label class="check-item"><input data-check-id="item-24" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">睡衣</span></label><label class="check-item"><input data-check-id="item-25" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">換洗衣物袋</span></label></div><div class="check-group"><h3>其他</h3><label class="check-item"><input data-check-id="item-26" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">後背包</span></label><label class="check-item"><input data-check-id="item-27" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">小包</span></label><label class="check-item"><input data-check-id="item-28" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">隨身小水壺</span></label><label class="check-item"><input data-check-id="item-29" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">摺疊傘</span></label><label class="check-item"><input data-check-id="item-30" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">濕紙巾／衛生紙袖珍包</span></label><label class="check-item"><input data-check-id="item-31" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">抽取式衛生紙</span></label><label class="check-item"><input data-check-id="item-32" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">口罩</span></label><label class="check-item"><input data-check-id="item-33" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">防曬乳</span></label></div><div class="check-group"><h3>個人保健藥品</h3><p class="group-note">藥品請保留原包裝</p><label class="check-item"><input data-check-id="item-34" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">止痛藥</span></label><label class="check-item"><input data-check-id="item-35" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">暈機暈車藥</span></label><label class="check-item"><input data-check-id="item-36" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">維他命</span></label><label class="check-item"><input data-check-id="item-37" type="checkbox"/><span aria-hidden="true" class="check-box"></span><span class="check-label">感冒藥</span></label></div><div class="check-actions"><button id="reset-checks" type="button">清除勾選，重新開始</button></div></section></main>
 <footer>

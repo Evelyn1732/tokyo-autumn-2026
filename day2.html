@@ -400,13 +400,53 @@ body{background:#fff!important;color:#54382b;font-family:'Zen Maru Gothic','Hira
 .journal-events .nature{background:#e7eedf}.journal-events .food{background:#f6e4df}.journal-events .city{background:#fff0d0}.journal-events .night{background:#eee5f5}.journal-events .travel{background:#f0efed}
 .notebook-note{font-size:12px;line-height:1.7;border-top:1px dashed #bba594;padding-top:12px;color:#765a49}
 @media(max-width:600px){.day-panel{padding:10px!important}.journal-events li{grid-template-columns:50px minmax(0,1fr);gap:6px;padding:9px}.journal-dayhead h2{font-size:18px}}
-</style></head>
+</style>
+<style id="bottom-tabbar-v2">
+/* FB/IG style: persistent bottom tabs, icon above small label */
+html{scroll-padding-bottom:95px}
+body{padding-bottom:calc(82px + env(safe-area-inset-bottom,0px))!important}
+header.bar{
+ position:fixed!important;top:auto!important;bottom:0!important;left:0!important;right:0!important;
+ z-index:9999!important;margin:0!important;padding:0 0 env(safe-area-inset-bottom,0px)!important;
+ background:rgba(250,246,239,.97)!important;
+ border-top:1px solid #ded0c4!important;border-bottom:0!important;
+ box-shadow:0 -5px 24px rgba(58,44,34,.09)!important;
+ -webkit-backdrop-filter:blur(16px)!important;backdrop-filter:blur(16px)!important;
+}
+header.bar .nav-shell{width:100%!important;max-width:680px!important;margin:auto!important;padding:0 7px!important}
+header.bar .main-tabs{
+ display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;
+ align-items:stretch!important;justify-items:stretch!important;gap:0!important;
+ width:100%!important;max-width:none!important;padding:0!important;margin:0!important;
+}
+header.bar .main-tabs a{
+ min-width:0!important;min-height:72px!important;display:flex!important;flex-direction:column!important;
+ align-items:center!important;justify-content:center!important;gap:3px!important;
+ padding:9px 2px 7px!important;border:0!important;border-radius:0!important;
+ text-decoration:none!important;background:transparent!important;box-shadow:none!important;
+ color:#81746b!important;font-size:10px!important;line-height:1.25!important;font-weight:500!important;
+}
+header.bar .main-tabs a .tab-icon{
+ display:block!important;font-size:25px!important;line-height:1!important;
+ height:29px!important;font-weight:400!important;color:inherit!important;
+}
+header.bar .main-tabs a.active,header.bar .main-tabs a[aria-current="page"]{
+ color:#934a55!important;font-weight:700!important;
+}
+header.bar .main-tabs a.active .tab-icon{color:#934a55!important}
+@media(prefers-color-scheme:dark){
+ header.bar{background:rgba(32,26,25,.96)!important;border-top-color:#53463e!important}
+ header.bar .main-tabs a{color:#c0b2a9!important}
+ header.bar .main-tabs a.active{color:#f1b8b7!important}
+}
+</style>
+</head>
 <body>
 <header class="bar"><div class="nav-shell"><nav aria-label="主要導覽" class="main-tabs">
 <a class="" href="index.html"><span class="tab-icon">⌂</span><span>首頁</span></a>
 <a class="active" href="day1.html"><span class="tab-icon">▦</span><span>每日行程</span></a>
 <a class="" href="info.html"><span class="tab-icon">ⓘ</span><span>旅遊資訊</span></a>
-<a class="" href="checklist.html"><span class="tab-icon">☑</span><span>行前清單</span></a>
+<a class="" href="checklist.html"><span class="tab-icon"><svg aria-hidden="true" width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:block"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5h6M9 12l2 2 4-4M9 17h6"/></svg></span><span>行前清單</span></a>
 </nav></div></header>
 <main id="top"><section class="app-page itinerary-page" id="page-itinerary"><div class="itinerary-intro"><span class="section-kicker">DAILY ITINERARY</span><h2>品川早餐・輕井澤・銀座</h2><p>選擇日期，查看當日景點、交通與餐飲安排。</p></div>
 <p style="margin:8px 0 17px;text-align:center"><a href="timetable.html" style="display:inline-block;padding:9px 17px;border:1px solid #D9CBAE;border-radius:999px;background:#fffaf2;color:#6F5E4B;text-decoration:none;font-size:13px">◷ 四日時間軸簡表 ↗</a></p><nav aria-label="選擇行程日期" class="day-tabs">
